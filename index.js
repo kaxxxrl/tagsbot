@@ -33,7 +33,7 @@ client.on('guildMemberAdd', member => {
 });
 
 client.on('guildMemberRemove', member => {
-    pozegnania(member); // bez "ż"
+    pozegnania(member); // ✅ poprawna wersja
 });
 
 client.login(process.env.TOKEN);
