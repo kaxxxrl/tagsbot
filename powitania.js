@@ -9,8 +9,8 @@ module.exports = async function powitanie(member) {
         .setColor('#ff0000')
         .setTitle(`Witaj, ${member.user.username} <:3074woah:1375120178500599848>!`)
         .setDescription(`> <a:73288animatedarrowred:1375119792029306930> Dziękujemy że dołączyłeś na **${member.guild.name}**!\n**Nie zapomnij zobaczyć na kanał z tagami**!`)
-        .setThumbnail(member.user.displayAvatarURL({ dynamic: true })) // dodano miniaturkę
+        .setThumbnail(member.user.displayAvatarURL({ dynamic: true }))
         .setTimestamp();
 
-    channel.send({ content: `${member}!`, embeds: [embed] });
+    await channel.send({ content: `${member}`, embeds: [embed] });
 };
