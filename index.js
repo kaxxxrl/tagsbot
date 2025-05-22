@@ -1,7 +1,8 @@
-
 const { Client, GatewayIntentBits } = require('discord.js');
 require('dotenv').config();
+
 const powitania = require('./powitania');
+const pozegnania = require('./pozegnania');
 
 const client = new Client({
     intents: [
@@ -29,6 +30,10 @@ client.once('ready', () => {
 
 client.on('guildMemberAdd', member => {
     powitania(member);
+});
+
+client.on('guildMemberRemove', member => {
+    pozegnania(member);
 });
 
 client.login(process.env.TOKEN);
