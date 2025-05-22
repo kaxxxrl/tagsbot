@@ -2,7 +2,7 @@ const { Client, GatewayIntentBits } = require('discord.js');
 require('dotenv').config();
 
 const powitania = require('./powitania');
-const pozegnania = require('./pożegnania');
+const pozegnania = require('./pozegnania'); // bez "ż"
 
 const client = new Client({
     intents: [
@@ -33,7 +33,7 @@ client.on('guildMemberAdd', member => {
 });
 
 client.on('guildMemberRemove', member => {
-    pożegnania(member);
+    pozegnania(member); // bez "ż"
 });
 
 client.login(process.env.TOKEN);
