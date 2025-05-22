@@ -14,4 +14,4 @@ async function sendFarewell(member) {
   await channel.send({ embeds: [embed] });
 }
 
-module.exports = { sendFarewell };
+module.exports = sendFarewell;
