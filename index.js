@@ -12,6 +12,20 @@ const client = new Client({
     ]
 });
 
+// --- Express ---
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send('Bot działa 🚀');
+});
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`🌐 Serwer Express działa na porcie ${PORT}`);
+});
+// --- Express koniec ---
+
 client.once('ready', () => {
     console.log(`✅ Zalogowano jako ${client.user.tag}`);
 });
