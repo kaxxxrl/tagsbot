@@ -33,7 +33,7 @@ client.on('guildMemberAdd', member => {
 });
 
 client.on('guildMemberRemove', member => {
-    pozegnania(member);
+    pożegnania(member);
 });
 
 client.login(process.env.TOKEN);
